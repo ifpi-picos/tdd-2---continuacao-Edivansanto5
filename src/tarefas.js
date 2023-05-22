@@ -4,8 +4,8 @@ class Tarefas {
     }
   
     adicionar(descricao) {
-      this.lista.push({ descricao: descricao, concluida: false })
-      console.log(this.lista)
+      this.lista.push({ descricao: descricao, concluida: false });
+   
     }
   
     remover(indice) {

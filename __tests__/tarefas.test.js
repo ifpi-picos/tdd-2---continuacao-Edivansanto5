@@ -1,9 +1,10 @@
-const Tarefas = require('../src/tarefas');
+
+const Tarefas = require('../src/tarefas')
 
 test('Adiciona uma tarefa', () => {
   const tarefas = new Tarefas();
   tarefas.adicionar('Comprar pão');
-  expect(tarefas.todas()).toEqual([{ descricao: 'Comprar pão', concluida: false }]);
+  expect(tarefas.todas()).toEqual([{ descricao: 'Comprar pão', concluida: false }]);;
 });
 
 test('Remove uma tarefa', () => {

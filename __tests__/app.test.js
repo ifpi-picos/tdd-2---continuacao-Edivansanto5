@@ -18,7 +18,10 @@ describe('Testes da API de Tarefas', () => {
       .send({ descricao: 'Tarefa 1' });
 
     expect(response.status).toBe(201);
-    expect(response.text).toBe('Tarefa adicionada com sucesso!');
+    expect(response.text).toBe('{"message":"Tarefa adicionada com sucesso."}');
+
+    // expect(response.text).toBe('Tarefa adicionada com sucesso!')
+;
   });
   test('GET /tarefas - Deve retornar todas as tarefas', async () => {
     const response = await request(server).get('/tarefas');
