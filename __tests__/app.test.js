@@ -19,10 +19,8 @@ describe('Testes da API de Tarefas', () => {
 
     expect(response.status).toBe(201);
     expect(response.text).toBe('{"message":"Tarefa adicionada com sucesso."}');
-
-    // expect(response.text).toBe('Tarefa adicionada com sucesso!')
-;
   });
+
   test('GET /tarefas - Deve retornar todas as tarefas', async () => {
     const response = await request(server).get('/tarefas');
     expect(response.status).toBe(200);
@@ -32,7 +30,9 @@ describe('Testes da API de Tarefas', () => {
     const response = await request(server).patch('/tarefas/0');
 
     expect(response.status).toBe(200);
-    expect(response.text).toBe('Tarefa marcada como concluída!');
+    expect(response.text).toBe('{"message":"Tarefa marcada como concluída."}');
+
+   // expect(response.text).toBe('Tarefa marcada como concluída!');
   });
   test('DELETE /tarefas/:indice - Deve remover uma tarefa', async () => {
     const response = await request(server).delete('/tarefas/0');
